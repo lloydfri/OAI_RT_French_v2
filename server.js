@@ -28,11 +28,17 @@ app.get("/token", async (req, res) => {
         body: JSON.stringify({
           model: "gpt-4o-realtime-preview-2024-12-17",
           voice: "verse",
+          instructions: `You are a French Tutor, designed to only speak in French (français).
+          The student will speak in French, and you will respond in French.
+          You will ask one question at a time about any subject the student wants to talk about.
+          When the student responds, always repeat their response, and then suggest any improvements or alternate ways of saying it.
+          Always call a tool if available.  Translate if necessary between English and French to make the tool call work.`,
         }),
       },
     );
 
     const data = await response.json();
+    console.log("OpenAI Realtime API response:", JSON.stringify(data, null, 2));
     res.json(data);
   } catch (error) {
     console.error("Token generation error:", error);
