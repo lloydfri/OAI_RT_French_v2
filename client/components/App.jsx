@@ -3,6 +3,7 @@ import logo from "/assets/openai-logomark.svg";
 import EventLog from "./EventLog";
 import SessionControls from "./SessionControls";
 import ToolPanel from "./ToolPanel";
+import ArticlePanel from "./ArticlePanel";
 
 export default function App() {
   const [isSessionActive, setIsSessionActive] = useState(false);
@@ -10,8 +11,12 @@ export default function App() {
   const [dataChannel, setDataChannel] = useState(null);
   const peerConnection = useRef(null);
   const audioElement = useRef(null);
+  const hasRegisteredTools = useRef(false);
 
   async function startSession() {
+    // Reset the tool registration flag
+    hasRegisteredTools.current = false;
+    
     // Get a session token for OpenAI Realtime API
     const tokenResponse = await fetch("/token");
     const data = await tokenResponse.json();
@@ -63,6 +68,44 @@ export default function App() {
     await pc.setRemoteDescription(answer);
 
     peerConnection.current = pc;
+    
+    // Set up event listener for when the channel opens
+    dc.addEventListener("open", () => {
+      // Wait a short time before registering tools
+      if (!hasRegisteredTools.current) {
+        setTimeout(() => {
+          // Explicit tool registration on session start
+          const toolRegistration = {
+            type: "session.update",
+            session: {
+              tools: [
+                {
+                  type: "function",
+                  name: "display_article",
+                  description: "Call this function when a user gives you a URL, implicitly asking you to have a conversation about the article on that URL.",
+                  parameters: {
+                    type: "object",
+                    strict: true,
+                    properties: {
+                      url: {
+                        type: "string",
+                        description: "URL of the article to fetch and display.",
+                      },
+                    },
+                    required: ["url"],
+                  },
+                },
+              ],
+              tool_choice: "auto",
+            },
+          };
+          
+          // Send the tool registration directly
+          dc.send(JSON.stringify(toolRegistration));
+          hasRegisteredTools.current = true;
+        }, 1000);
+      }
+    });
   }
 
   // Stop current session, clean up peer connection and data channel
@@ -92,6 +135,8 @@ export default function App() {
       const timestamp = new Date().toLocaleTimeString();
       message.event_id = message.event_id || crypto.randomUUID();
 
+      // No logging to improve performance
+
       // send event before setting timestamp since the backend peer doesn't expect this field
       dataChannel.send(JSON.stringify(message));
 
@@ -110,6 +155,8 @@ export default function App() {
 
   // Send a text message to the model
   function sendTextMessage(message) {
+    // No logging to improve performance
+    
     const event = {
       type: "conversation.item.create",
       item: {
@@ -138,11 +185,14 @@ export default function App() {
           event.timestamp = new Date().toLocaleTimeString();
         }
 
+        // No logging to improve performance
+        
         setEvents((prev) => [event, ...prev]);
       });
 
       // Set session active when the data channel is opened
       dataChannel.addEventListener("open", () => {
+        // Suppress all logging
         setIsSessionActive(true);
         setEvents([]);
       });
@@ -158,7 +208,7 @@ export default function App() {
         </div>
       </nav>
       <main className="absolute top-16 left-0 right-0 bottom-0">
-        <section className="absolute top-0 left-0 right-[380px] bottom-0 flex">
+        <section className="absolute top-0 left-0 right-[760px] bottom-0 flex">
           <section className="absolute top-0 left-0 right-0 bottom-32 px-4 overflow-y-auto">
             <EventLog events={events} />
           </section>
@@ -172,6 +222,14 @@ export default function App() {
               isSessionActive={isSessionActive}
             />
           </section>
+        </section>
+        <section className="absolute top-0 w-[380px] right-[380px] bottom-0 p-4 pt-0 overflow-y-auto">
+          <ArticlePanel
+            sendClientEvent={sendClientEvent}
+            sendTextMessage={sendTextMessage}
+            events={events}
+            isSessionActive={isSessionActive}
+          />
         </section>
         <section className="absolute top-0 w-[380px] right-0 bottom-0 p-4 pt-0 overflow-y-auto">
           <ToolPanel

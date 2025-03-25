@@ -1,5 +1,5 @@
 import { ArrowUp, ArrowDown } from "react-feather";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function TranscriptionEvent({ content, timestamp }) {
   return (
@@ -17,67 +17,76 @@ function TranscriptionEvent({ content, timestamp }) {
 }
 
 export default function EventLog({ events }) {
-  // Extract only transcriptions from the server
-  const transcriptionsToDisplay = events
-    .filter(event => {
-      // Only include response.done events with completed status that have output
-      return (
-        event.type === "response.done" && 
-        event.event_id && 
-        event.event_id.startsWith("event_") &&
-        event.response?.status === "completed" &&
-        Array.isArray(event.response?.output)
-      );
-    })
-    .map(event => {
-      // Find the text content in the output array
-      let content = "";
+  const [activeTranscriptions, setActiveTranscriptions] = useState({});
+  
+  // Log when we receive new events
+  useEffect(() => {
+    if (events.length > 0) {
+     // console.log(`Received ${events.length} total events`);
       
-      if (event.response.output) {
-        for (const item of event.response.output) {
-          // Check for message items that contain audio content with transcripts
-          if (item.type === "message" && Array.isArray(item.content)) {
-            for (const contentItem of item.content) {
-              // For audio items, get the transcript property
-              if (contentItem.type === "audio" && contentItem.transcript) {
-                content = contentItem.transcript;
-                break;
-              }
-              // Also check for text content (fallback)
-              else if (contentItem.type === "text" && contentItem.text) {
-                content = contentItem.text;
-                break;
-              }
-            }
-          }
-          // Direct text in the output item (fallback)
-          else if (item.type === "text" && item.text) {
-            content = item.text;
-          }
-          
-          if (content) break;
-        }
+      // Count events by type for overview
+      const eventTypes = {};
+      events.forEach(e => {
+        eventTypes[e.type] = (eventTypes[e.type] || 0) + 1;
+      });
+      //console.log("Event types:", eventTypes);
+    }
+  }, [events]);
+  
+  useEffect(() => {
+    // Get only response.audio_transcript.done events
+    const transcriptEvents = events.filter(event => 
+      event.type === "response.audio_transcript.done" && event.transcript
+    );
+    
+    if (transcriptEvents.length === 0) return;
+    
+    // Process each transcript event
+    const updates = {};
+    transcriptEvents.forEach(event => {
+      const key = event.response_id + "-" + event.item_id;
+      
+      if (event.transcript && typeof event.transcript === 'string' && event.transcript.trim().length > 0) {
+        updates[key] = {
+          content: event.transcript.trim(),
+          timestamp: event.timestamp,
+          key: key,
+          item_id: event.item_id
+        };
       }
-      
-      return {
-        key: event.event_id,
-        content: content,
-        timestamp: event.timestamp,
-      };
+    });
+    
+    if (Object.keys(updates).length > 0) {
+      //console.log(`Adding ${Object.keys(updates).length} transcriptions:`, updates);
+      setActiveTranscriptions(prev => ({ ...prev, ...updates }));
+    }
+  }, [events]);
+
+  // Convert the transcriptions object to an array for rendering
+  const transcriptionsToDisplay = Object.values(activeTranscriptions)
+    .filter(item => item.content && item.content.trim().length > 0)
+    .sort((a, b) => {
+      const timeA = new Date(a.timestamp).getTime();
+      const timeB = new Date(b.timestamp).getTime();
+      return timeA - timeB;
     })
-    .filter(item => item.content) // Only include items with actual content
     .map(item => (
       <TranscriptionEvent 
-        key={item.key} 
-        content={item.content} 
-        timestamp={item.timestamp} 
+        key={item.key}
+        content={item.content}
+        timestamp={item.timestamp}
       />
     ));
+    
+  // Log when transcriptions change
+  useEffect(() => {
+    console.log(`Displaying ${transcriptionsToDisplay.length} transcriptions`);
+  }, [transcriptionsToDisplay.length]);
 
   return (
     <div className="flex flex-col gap-2 overflow-x-auto">
       {transcriptionsToDisplay.length === 0 ? (
-        <div className="text-gray-500">En attente de la prise de parole de l’élève avec le tuteur de français...</div>
+        <div className="text-gray-500">En attente de la prise de parole de l'élève avec le tuteur de français...</div>
       ) : (
         transcriptionsToDisplay
       )}

@@ -1,0 +1,610 @@
+client:495 [vite] connecting...
+client:614 [vite] connected.
+EventLog.jsx:134 Displaying 0 transcriptions
+EventLog.jsx:134 Displaying 0 transcriptions
+EventLog.jsx:51 Received 1 total events
+EventLog.jsx:56 Event types: {session.created: 1}
+EventLog.jsx:51 Received 2 total events
+EventLog.jsx:56 Event types: {session.update: 1, session.created: 1}
+EventLog.jsx:51 Received 3 total events
+EventLog.jsx:56 Event types: {session.updated: 1, session.update: 1, session.created: 1}
+EventLog.jsx:51 Received 4 total events
+EventLog.jsx:56 Event types: {session.updated: 2, session.update: 1, session.created: 1}
+EventLog.jsx:51 Received 5 total events
+EventLog.jsx:56 Event types: {input_audio_buffer.speech_started: 1, session.updated: 2, session.update: 1, session.created: 1}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:51 Received 6 total events
+EventLog.jsx:56 Event types: {input_audio_buffer.speech_stopped: 1, input_audio_buffer.speech_started: 1, session.updated: 2, session.update: 1, session.created: 1}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:51 Received 7 total events
+EventLog.jsx:56 Event types: {input_audio_buffer.committed: 1, input_audio_buffer.speech_stopped: 1, input_audio_buffer.speech_started: 1, session.updated: 2, session.update: 1, …}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:51 Received 8 total events
+EventLog.jsx:56 Event types: {conversation.item.created: 1, input_audio_buffer.committed: 1, input_audio_buffer.speech_stopped: 1, input_audio_buffer.speech_started: 1, session.updated: 2, …}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:51 Received 9 total events
+EventLog.jsx:56 Event types: {response.created: 1, conversation.item.created: 1, input_audio_buffer.committed: 1, input_audio_buffer.speech_stopped: 1, input_audio_buffer.speech_started: 1, …}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:51 Received 10 total events
+EventLog.jsx:56 Event types: {rate_limits.updated: 1, response.created: 1, conversation.item.created: 1, input_audio_buffer.committed: 1, input_audio_buffer.speech_stopped: 1, …}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:51 Received 12 total events
+EventLog.jsx:56 Event types: {conversation.item.created: 2, response.output_item.added: 1, rate_limits.updated: 1, response.created: 1, input_audio_buffer.committed: 1, …}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:51 Received 14 total events
+EventLog.jsx:56 Event types: {response.audio_transcript.delta: 1, response.content_part.added: 1, conversation.item.created: 2, response.output_item.added: 1, rate_limits.updated: 1, …}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'Bien', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.added', id: 'event_BEmhXHCgISJh6PyOpHGBV', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:101 Updating 1 transcriptions: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:51 Received 15 total events
+EventLog.jsx:56 Event types: {response.audio_transcript.delta: 2, response.content_part.added: 1, conversation.item.created: 2, response.output_item.added: 1, rate_limits.updated: 1, …}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sûr', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'Bien', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.added', id: 'event_BEmhXHCgISJh6PyOpHGBV', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:101 Updating 1 transcriptions: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:134 Displaying 1 transcriptions
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:51 Received 16 total events
+EventLog.jsx:56 Event types: {response.audio_transcript.delta: 3, response.content_part.added: 1, conversation.item.created: 2, response.output_item.added: 1, rate_limits.updated: 1, …}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ',', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sûr', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'Bien', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.added', id: 'event_BEmhXHCgISJh6PyOpHGBV', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:101 Updating 1 transcriptions: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:51 Received 17 total events
+EventLog.jsx:56 Event types: {response.audio_transcript.delta: 4, response.content_part.added: 1, conversation.item.created: 2, response.output_item.added: 1, rate_limits.updated: 1, …}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' je', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ',', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sûr', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'Bien', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.added', id: 'event_BEmhXHCgISJh6PyOpHGBV', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:101 Updating 1 transcriptions: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:51 Received 18 total events
+EventLog.jsx:56 Event types: {response.audio_transcript.delta: 5, response.content_part.added: 1, conversation.item.created: 2, response.output_item.added: 1, rate_limits.updated: 1, …}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vais', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' je', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ',', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sûr', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'Bien', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.added', id: 'event_BEmhXHCgISJh6PyOpHGBV', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:101 Updating 1 transcriptions: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:51 Received 19 total events
+EventLog.jsx:56 Event types: {output_audio_buffer.started: 1, response.audio_transcript.delta: 5, response.content_part.added: 1, conversation.item.created: 2, response.output_item.added: 1, …}
+EventLog.jsx:91 Other potentially interesting event: {type: 'output_audio_buffer.started', id: 'event_dd9b6667416c4b7b', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: undefined, timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vais', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' je', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ',', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sûr', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'Bien', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.added', id: 'event_BEmhXHCgISJh6PyOpHGBV', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:101 Updating 1 transcriptions: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:51 Received 20 total events
+EventLog.jsx:56 Event types: {response.audio_transcript.delta: 6, output_audio_buffer.started: 1, response.content_part.added: 1, conversation.item.created: 2, response.output_item.added: 1, …}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'output_audio_buffer.started', id: 'event_dd9b6667416c4b7b', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: undefined, timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vais', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' je', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ',', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sûr', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'Bien', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.added', id: 'event_BEmhXHCgISJh6PyOpHGBV', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:101 Updating 1 transcriptions: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:51 Received 22 total events
+EventLog.jsx:56 Event types: {response.audio_transcript.delta: 8, output_audio_buffer.started: 1, response.content_part.added: 1, conversation.item.created: 2, response.output_item.added: 1, …}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' des', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' poser', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'output_audio_buffer.started', id: 'event_dd9b6667416c4b7b', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: undefined, timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vais', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' je', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ',', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sûr', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'Bien', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.added', id: 'event_BEmhXHCgISJh6PyOpHGBV', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:101 Updating 1 transcriptions: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:51 Received 23 total events
+EventLog.jsx:56 Event types: {response.audio_transcript.delta: 9, output_audio_buffer.started: 1, response.content_part.added: 1, conversation.item.created: 2, response.output_item.added: 1, …}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' questions', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' des', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' poser', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'output_audio_buffer.started', id: 'event_dd9b6667416c4b7b', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: undefined, timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vais', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' je', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ',', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sûr', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'Bien', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.added', id: 'event_BEmhXHCgISJh6PyOpHGBV', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:101 Updating 1 transcriptions: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:51 Received 24 total events
+EventLog.jsx:56 Event types: {response.audio_transcript.delta: 10, output_audio_buffer.started: 1, response.content_part.added: 1, conversation.item.created: 2, response.output_item.added: 1, …}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pour', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' questions', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' des', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' poser', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'output_audio_buffer.started', id: 'event_dd9b6667416c4b7b', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: undefined, timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vais', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' je', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ',', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sûr', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'Bien', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.added', id: 'event_BEmhXHCgISJh6PyOpHGBV', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:101 Updating 1 transcriptions: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:51 Received 31 total events
+EventLog.jsx:56 Event types: {response.audio_transcript.delta: 17, output_audio_buffer.started: 1, response.content_part.added: 1, conversation.item.created: 2, response.output_item.added: 1, …}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: '.', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' français', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' le', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pratiquer', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' à', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' aider', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pour', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' questions', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' des', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' poser', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'output_audio_buffer.started', id: 'event_dd9b6667416c4b7b', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: undefined, timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vais', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' je', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ',', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sûr', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'Bien', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.added', id: 'event_BEmhXHCgISJh6PyOpHGBV', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:101 Updating 1 transcriptions: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:51 Received 32 total events
+EventLog.jsx:56 Event types: {response.audio_transcript.delta: 18, output_audio_buffer.started: 1, response.content_part.added: 1, conversation.item.created: 2, response.output_item.added: 1, …}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' Quel', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: '.', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' français', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' le', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pratiquer', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' à', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' aider', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pour', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' questions', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' des', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' poser', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'output_audio_buffer.started', id: 'event_dd9b6667416c4b7b', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: undefined, timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vais', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' je', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ',', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sûr', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'Bien', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.added', id: 'event_BEmhXHCgISJh6PyOpHGBV', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:101 Updating 1 transcriptions: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:51 Received 33 total events
+EventLog.jsx:56 Event types: {response.audio_transcript.delta: 19, output_audio_buffer.started: 1, response.content_part.added: 1, conversation.item.created: 2, response.output_item.added: 1, …}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sujet', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' Quel', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: '.', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' français', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' le', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pratiquer', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' à', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' aider', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pour', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' questions', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' des', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' poser', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'output_audio_buffer.started', id: 'event_dd9b6667416c4b7b', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: undefined, timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vais', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' je', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ',', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sûr', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'Bien', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.added', id: 'event_BEmhXHCgISJh6PyOpHGBV', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:101 Updating 1 transcriptions: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:51 Received 34 total events
+EventLog.jsx:56 Event types: {response.audio_transcript.delta: 20, output_audio_buffer.started: 1, response.content_part.added: 1, conversation.item.created: 2, response.output_item.added: 1, …}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' aimer', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sujet', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' Quel', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: '.', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' français', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' le', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pratiquer', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' à', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' aider', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pour', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' questions', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' des', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' poser', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'output_audio_buffer.started', id: 'event_dd9b6667416c4b7b', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: undefined, timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vais', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' je', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ',', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sûr', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'Bien', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.added', id: 'event_BEmhXHCgISJh6PyOpHGBV', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:101 Updating 1 transcriptions: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:51 Received 35 total events
+EventLog.jsx:56 Event types: {response.audio_transcript.delta: 21, output_audio_buffer.started: 1, response.content_part.added: 1, conversation.item.created: 2, response.output_item.added: 1, …}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'iez', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' aimer', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sujet', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' Quel', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: '.', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' français', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' le', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pratiquer', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' à', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' aider', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pour', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' questions', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' des', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' poser', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'output_audio_buffer.started', id: 'event_dd9b6667416c4b7b', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: undefined, timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vais', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' je', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ',', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sûr', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'Bien', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.added', id: 'event_BEmhXHCgISJh6PyOpHGBV', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:101 Updating 1 transcriptions: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:51 Received 36 total events
+EventLog.jsx:56 Event types: {response.audio_transcript.delta: 22, output_audio_buffer.started: 1, response.content_part.added: 1, conversation.item.created: 2, response.output_item.added: 1, …}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: '-vous', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'iez', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' aimer', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sujet', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' Quel', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: '.', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' français', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' le', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pratiquer', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' à', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' aider', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pour', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' questions', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' des', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' poser', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'output_audio_buffer.started', id: 'event_dd9b6667416c4b7b', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: undefined, timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vais', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' je', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ',', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sûr', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'Bien', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.added', id: 'event_BEmhXHCgISJh6PyOpHGBV', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:101 Updating 1 transcriptions: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:51 Received 37 total events
+EventLog.jsx:56 Event types: {response.audio_transcript.delta: 23, output_audio_buffer.started: 1, response.content_part.added: 1, conversation.item.created: 2, response.output_item.added: 1, …}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' ab', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: '-vous', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'iez', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' aimer', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sujet', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' Quel', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: '.', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' français', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' le', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pratiquer', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' à', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' aider', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pour', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' questions', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' des', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' poser', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'output_audio_buffer.started', id: 'event_dd9b6667416c4b7b', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: undefined, timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vais', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' je', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ',', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sûr', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'Bien', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.added', id: 'event_BEmhXHCgISJh6PyOpHGBV', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:101 Updating 1 transcriptions: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:51 Received 38 total events
+EventLog.jsx:56 Event types: {response.audio_transcript.delta: 24, output_audio_buffer.started: 1, response.content_part.added: 1, conversation.item.created: 2, response.output_item.added: 1, …}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'order', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' ab', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: '-vous', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'iez', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' aimer', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sujet', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' Quel', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: '.', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' français', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' le', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pratiquer', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' à', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' aider', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pour', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' questions', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' des', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' poser', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'output_audio_buffer.started', id: 'event_dd9b6667416c4b7b', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: undefined, timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vais', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' je', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ',', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sûr', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'Bien', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.added', id: 'event_BEmhXHCgISJh6PyOpHGBV', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:101 Updating 1 transcriptions: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:51 Received 39 total events
+EventLog.jsx:56 Event types: {response.audio_transcript.delta: 25, output_audio_buffer.started: 1, response.content_part.added: 1, conversation.item.created: 2, response.output_item.added: 1, …}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' ?', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'order', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' ab', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: '-vous', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'iez', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' aimer', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sujet', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' Quel', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: '.', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' français', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' le', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pratiquer', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' à', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' aider', timestamp: '5:44:59 PM'}delta: " aider"timestamp: "5:44:59 PM"[[Prototype]]: Object
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pour', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' questions', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' des', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' poser', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'output_audio_buffer.started', id: 'event_dd9b6667416c4b7b', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: undefined, timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vais', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' je', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ',', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sûr', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'Bien', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.added', id: 'event_BEmhXHCgISJh6PyOpHGBV', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:101 Updating 1 transcriptions: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:51 Received 42 total events
+EventLog.jsx:56 Event types: {response.content_part.done: 1, response.audio_transcript.done: 1, response.audio.done: 1, response.audio_transcript.delta: 25, output_audio_buffer.started: 1, …}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.done', id: 'event_BEmhYlgXutzNa7xZICCNM', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:45:00 PM'}
+EventLog.jsx:77 Transcript done for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {transcript: 'Bien sûr, je vais vous poser des questions pour vo…r le français. Quel sujet aimeriez-vous aborder ?', timestamp: '5:45:00 PM'}timestamp: "5:45:00 PM"transcript: "Bien sûr, je vais vous poser des questions pour vous aider à pratiquer le français. Quel sujet aimeriez-vous aborder ?"[[Prototype]]: Object
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.audio.done', id: 'event_BEmhYYrXmTDAKRy1AY2VP', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' ?', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'order', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' ab', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: '-vous', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'iez', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' aimer', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sujet', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' Quel', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: '.', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' français', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' le', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pratiquer', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' à', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' aider', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pour', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' questions', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' des', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' poser', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'output_audio_buffer.started', id: 'event_dd9b6667416c4b7b', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: undefined, timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vais', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' je', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ',', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sûr', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'Bien', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.added', id: 'event_BEmhXHCgISJh6PyOpHGBV', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:101 Updating 1 transcriptions: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {content: 'Bien', timestamp: '5:44:59 PM', key: 'resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5'}[[Prototype]]: Object
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {content: 'Bien', timestamp: '5:44:59 PM', key: 'resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5'}[[Prototype]]: Object
+EventLog.jsx:51 Received 44 total events
+EventLog.jsx:56 Event types: {response.done: 1, response.output_item.done: 1, response.content_part.done: 1, response.audio_transcript.done: 1, response.audio.done: 1, …}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.done', id: 'event_BEmhYlgXutzNa7xZICCNM', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:45:00 PM'}
+EventLog.jsx:77 Transcript done for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {transcript: 'Bien sûr, je vais vous poser des questions pour vo…r le français. Quel sujet aimeriez-vous aborder ?', timestamp: '5:45:00 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.audio.done', id: 'event_BEmhYYrXmTDAKRy1AY2VP', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' ?', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'order', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' ab', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: '-vous', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'iez', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' aimer', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sujet', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' Quel', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: '.', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' français', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' le', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pratiquer', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' à', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' aider', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pour', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' questions', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' des', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' poser', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'output_audio_buffer.started', id: 'event_dd9b6667416c4b7b', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: undefined, timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vais', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' je', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ',', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sûr', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'Bien', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.added', id: 'event_BEmhXHCgISJh6PyOpHGBV', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:101 Updating 1 transcriptions: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {content: 'Bien', timestamp: '5:44:59 PM', key: 'resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5'}[[Prototype]]: Object
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {content: 'Bien', timestamp: '5:44:59 PM', key: 'resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5'}[[Prototype]]: Object
+EventLog.jsx:51 Received 45 total events
+EventLog.jsx:56 Event types: {output_audio_buffer.stopped: 1, response.done: 1, response.output_item.done: 1, response.content_part.done: 1, response.audio_transcript.done: 1, …}
+EventLog.jsx:91 Other potentially interesting event: {type: 'output_audio_buffer.stopped', id: 'event_1b895d97a03442dc', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: undefined, timestamp: '5:45:05 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.done', id: 'event_BEmhYlgXutzNa7xZICCNM', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:45:00 PM'}
+EventLog.jsx:77 Transcript done for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {transcript: 'Bien sûr, je vais vous poser des questions pour vo…r le français. Quel sujet aimeriez-vous aborder ?', timestamp: '5:45:00 PM'}timestamp: "5:45:00 PM"transcript: "Bien sûr, je vais vous poser des questions pour vous aider à pratiquer le français. Quel sujet aimeriez-vous aborder ?"[[Prototype]]: Object
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.audio.done', id: 'event_BEmhYYrXmTDAKRy1AY2VP', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' ?', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'order', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' ab', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: '-vous', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'iez', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' aimer', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sujet', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' Quel', timestamp: '5:45:00 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: '.', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' français', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' le', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pratiquer', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' à', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' aider', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pour', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' questions', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' des', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' poser', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'output_audio_buffer.started', id: 'event_dd9b6667416c4b7b', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: undefined, timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vais', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' je', timestamp: '5:44:59 PM'}
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ',', timestamp: '5:44:59 PM'}delta: ","timestamp: "5:44:59 PM"[[Prototype]]: Object
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sûr', timestamp: '5:44:59 PM'}delta: " sûr"timestamp: "5:44:59 PM"[[Prototype]]: Object
+EventLog.jsx:64 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'Bien', timestamp: '5:44:59 PM'}delta: "Bien"timestamp: "5:44:59 PM"[[Prototype]]: Object
+EventLog.jsx:91 Other potentially interesting event: {type: 'response.content_part.added', id: 'event_BEmhXHCgISJh6PyOpHGBV', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:44:59 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:91 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:101 Updating 1 transcriptions: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {content: 'Bien', timestamp: '5:44:59 PM', key: 'resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5'}[[Prototype]]: Object
+EventLog.jsx:107 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {content: 'Bien', timestamp: '5:44:59 PM', key: 'resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5'}[[Prototype]]: Object
+client:223 [vite] hot updated: /components/EventLog.jsx
+client:223 [vite] hot updated: /base.css
+client:656 [vite] css hot updated: /base.css
+EventLog.jsx:25 Received 45 total events
+EventLog.jsx:32 Event types: {output_audio_buffer.stopped: 1, response.done: 1, response.output_item.done: 1, response.content_part.done: 1, response.audio_transcript.done: 1, …}
+EventLog.jsx:92 Other potentially interesting event: {type: 'output_audio_buffer.stopped', id: 'event_1b895d97a03442dc', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: undefined, timestamp: '5:45:05 PM'}
+EventLog.jsx:92 Other potentially interesting event: {type: 'response.content_part.done', id: 'event_BEmhYlgXutzNa7xZICCNM', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:45:00 PM'}
+EventLog.jsx:72 Transcript done for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {transcript: 'Bien sûr, je vais vous poser des questions pour vo…r le français. Quel sujet aimeriez-vous aborder ?', timestamp: '5:45:00 PM'}
+EventLog.jsx:92 Other potentially interesting event: {type: 'response.audio.done', id: 'event_BEmhYYrXmTDAKRy1AY2VP', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:45:00 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' ?', timestamp: '5:45:00 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'order', timestamp: '5:45:00 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' ab', timestamp: '5:45:00 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: '-vous', timestamp: '5:45:00 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'iez', timestamp: '5:45:00 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' aimer', timestamp: '5:45:00 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sujet', timestamp: '5:45:00 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' Quel', timestamp: '5:45:00 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: '.', timestamp: '5:44:59 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' français', timestamp: '5:44:59 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' le', timestamp: '5:44:59 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pratiquer', timestamp: '5:44:59 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' à', timestamp: '5:44:59 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' aider', timestamp: '5:44:59 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' pour', timestamp: '5:44:59 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' questions', timestamp: '5:44:59 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' des', timestamp: '5:44:59 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' poser', timestamp: '5:44:59 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vous', timestamp: '5:44:59 PM'}
+EventLog.jsx:92 Other potentially interesting event: {type: 'output_audio_buffer.started', id: 'event_dd9b6667416c4b7b', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: undefined, timestamp: '5:44:59 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' vais', timestamp: '5:44:59 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' je', timestamp: '5:44:59 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ',', timestamp: '5:44:59 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: ' sûr', timestamp: '5:44:59 PM'}
+EventLog.jsx:46 Delta event for resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {delta: 'Bien', timestamp: '5:44:59 PM'}
+EventLog.jsx:92 Other potentially interesting event: {type: 'response.content_part.added', id: 'event_BEmhXHCgISJh6PyOpHGBV', response_id: 'resp_BEmhWubQbUqCmqpRxxw7S', item_id: 'item_BEmhWI5yHnjk2JQ7BP8i5', timestamp: '5:44:59 PM'}
+EventLog.jsx:92 Other potentially interesting event: {type: 'input_audio_buffer.committed', id: 'event_BEmhW4zEwS5OaF4gWwWlt', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:92 Other potentially interesting event: {type: 'input_audio_buffer.speech_stopped', id: 'event_BEmhW7IzLWS9YrPVtpGjG', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:58 PM'}
+EventLog.jsx:92 Other potentially interesting event: {type: 'input_audio_buffer.speech_started', id: 'event_BEmhVhrVCoSz2EXX3zRQ9', response_id: undefined, item_id: 'item_BEmhVpj27IHo4Y3X8ocxA', timestamp: '5:44:57 PM'}
+EventLog.jsx:154 Updating 1 transcriptions: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:185 Displaying 1 transcriptions
+EventLog.jsx:161 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}
+EventLog.jsx:161 New transcription state: {resp_BEmhWubQbUqCmqpRxxw7S-item_BEmhWI5yHnjk2JQ7BP8i5: {…}}

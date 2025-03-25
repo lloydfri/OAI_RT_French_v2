@@ -2,6 +2,7 @@ import express from "express";
 import fs from "fs";
 import { createServer as createViteServer } from "vite";
 import "dotenv/config";
+import fetch from "node-fetch";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -32,17 +33,47 @@ app.get("/token", async (req, res) => {
           The student will speak in French, and you will respond in French.
           You will ask one question at a time about any subject the student wants to talk about.
           When the student responds, always repeat their response, and then suggest any improvements or alternate ways of saying it.
-          Always call a tool if available.  Translate if necessary between English and French to make the tool call work.`,
+          
+          When the student shares a URL or website link (anything starting with http:// or https://):
+          1. IMMEDIATELY call the display_article tool with the URL as the parameter
+          2. After receiving the article content, discuss it in French with the student
+          
+          You have a function called "display_article" that you MUST use when someone gives you a URL. Use it to display an article from that URL.`,
         }),
       },
     );
 
     const data = await response.json();
-    console.log("OpenAI Realtime API response:", JSON.stringify(data, null, 2));
     res.json(data);
   } catch (error) {
-    console.error("Token generation error:", error);
+    console.error("Token generation error");
     res.status(500).json({ error: "Failed to generate token" });
+  }
+});
+
+// Proxy endpoint for fetching article content
+app.get("/api/fetch-article", async (req, res) => {
+  const { url } = req.query;
+  
+  if (!url) {
+    return res.status(400).json({ error: "URL parameter is required" });
+  }
+  
+  try {
+    const response = await fetch(url);
+    const contentType = response.headers.get("content-type");
+    
+    // Forward the content type header
+    res.setHeader("Content-Type", contentType || "text/plain");
+    
+    // Stream the response data
+    const text = await response.text();
+    res.send(text);
+  } catch (error) {
+    console.error("Article fetch error");
+    res.status(500).json({ 
+      error: "Failed to fetch article content"
+    });
   }
 });
 
