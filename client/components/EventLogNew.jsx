@@ -1,8 +1,9 @@
 import { ArrowUp, ArrowDown } from "react-feather";
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 
 function Event({ event, timestamp }) {
   const [isExpanded, setIsExpanded] = useState(false);
+
   const isClient = event.event_id && !event.event_id.startsWith("event_");
 
   return (
@@ -34,7 +35,7 @@ function Event({ event, timestamp }) {
 
 function Panel({ title, children }) {
   return (
-    <div className="flex flex-col border border-gray-200 rounded-md shadow-sm overflow-hidden">
+    <div className="flex flex-col border border-gray-200 rounded-md shadow-sm h-80 flex-1">
       <div className="bg-gray-100 p-2 font-semibold border-b border-gray-200">
         {title}
       </div>
@@ -47,7 +48,6 @@ function Panel({ title, children }) {
 
 export default function EventLog({ events }) {
   const [transcript, setTranscript] = useState("");
-  const transcriptRef = useRef(null);
   const normalEvents = [];
   const deltaEvents = {};
   let currentTranscript = "";
@@ -94,13 +94,6 @@ export default function EventLog({ events }) {
     setTranscript(currentTranscript);
   }
   
-  // Auto-scroll transcript container to bottom when transcript changes
-  useEffect(() => {
-    if (transcriptRef.current) {
-      transcriptRef.current.scrollTop = transcriptRef.current.scrollHeight;
-    }
-  }, [transcript]);
-  
   // Create a list of accumulated delta events for display
   const deltaEventsDisplay = Object.entries(deltaEvents).map(([deltaType, deltaEvent]) => (
     <Event 
@@ -111,22 +104,19 @@ export default function EventLog({ events }) {
   ));
 
   return (
-    <div className="h-full w-full">
-      <div className="grid grid-cols-3 gap-4 h-full">
-        <Panel title="Transcript">
-          <div 
-            ref={transcriptRef}
-            className="whitespace-pre-wrap text-gray-700 overflow-y-auto max-h-full"
-          >
-            {transcript || "Awaiting transcript..."}
-          </div>
-        </Panel>
-        
+    <div className="flex flex-col gap-4 h-full">
+      <div className="grid grid-cols-3 gap-4 h-[500px]">
         <Panel title="Normal Events">
           {normalEvents.length > 0 ? 
             normalEvents : 
             <div className="text-gray-500">No events yet...</div>
           }
+        </Panel>
+        
+        <Panel title="Transcript">
+          <div className="whitespace-pre-wrap text-gray-700">
+            {transcript || "Awaiting transcript..."}
+          </div>
         </Panel>
         
         <Panel title="Delta Events">
