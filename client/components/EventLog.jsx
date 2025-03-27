@@ -26,7 +26,7 @@ function Event({ event, timestamp }) {
           isExpanded ? "block" : "hidden"
         }`}
       >
-        <pre className="text-xs">{JSON.stringify(event, null, 2)}</pre>
+        <pre className="text-xs whitespace-pre-wrap break-words overflow-wrap-anywhere">{JSON.stringify(event, null, 2)}</pre>
       </div>
     </div>
   );

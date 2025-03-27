@@ -11,7 +11,30 @@ export default function App() {
   const [dataChannel, setDataChannel] = useState(null);
   const peerConnection = useRef(null);
   const audioElement = useRef(null);
+  const audioTrack = useRef(null);
+  const mediaStream = useRef(null);
   const hasRegisteredTools = useRef(false);
+  const audioSender = useRef(null);
+  const [isManualMode, setIsManualMode] = useState(false);
+
+  // Handle mode changes
+  useEffect(() => {
+    if (!isSessionActive || !peerConnection.current || !audioTrack.current) return;
+    
+    if (isManualMode) {
+      // Switching to Manual mode - disable the track but DON'T remove it
+      console.log("Switching to Manual mode: Disabling audio track");
+      if (audioTrack.current) {
+        audioTrack.current.enabled = false;
+      }
+    } else {
+      // Switching to VAD mode - enable the track
+      console.log("Switching to VAD mode: Enabling audio track");
+      if (audioTrack.current) {
+        audioTrack.current.enabled = true;
+      }
+    }
+  }, [isManualMode, isSessionActive]);
 
   async function startSession() {
     // Reset the tool registration flag
@@ -36,11 +59,29 @@ export default function App() {
     audioElement.current.autoplay = true;
     pc.ontrack = (e) => (audioElement.current.srcObject = e.streams[0]);
 
-    // Add local audio track for microphone input in the browser
-    const ms = await navigator.mediaDevices.getUserMedia({
-      audio: true,
-    });
-    pc.addTrack(ms.getTracks()[0]);
+    // Get microphone stream but don't add track yet for manual mode
+    try {
+      const ms = await navigator.mediaDevices.getUserMedia({
+        audio: true,
+      });
+      mediaStream.current = ms;
+      audioTrack.current = ms.getTracks()[0];
+      
+      // Always add the track, but disable it in Manual mode
+      audioSender.current = pc.addTrack(audioTrack.current, ms);
+      console.log("Initial setup: Added audio track");
+      
+      // If in Manual mode, disable the track initially
+      if (isManualMode) {
+        audioTrack.current.enabled = false;
+        console.log("Initial setup: Disabled track for Manual mode");
+      } else {
+        audioTrack.current.enabled = true;
+        console.log("Initial setup: Enabled track for VAD mode");
+      }
+    } catch (err) {
+      console.error("Error accessing microphone:", err);
+    }
 
     // Set up data channel for sending and receiving events
     const dc = pc.createDataChannel("oai-events");
@@ -108,22 +149,81 @@ export default function App() {
     });
   }
 
+  // Start voice transmission (for manual mode)
+  function startVoiceTransmission() {
+    if (!isSessionActive || !audioTrack.current) {
+      console.error("Cannot start voice transmission: missing prerequisites");
+      return;
+    }
+    
+    try {
+      console.log("Starting voice transmission: Enabling track");
+      // Just enable the track instead of adding/removing
+      audioTrack.current.enabled = true;
+      
+      // Log transmission start event
+      const transmissionStartEvent = {
+        type: "client.voice_transmission.start",
+        timestamp: new Date().toLocaleTimeString(),
+        event_id: crypto.randomUUID()
+      };
+      setEvents(prev => [transmissionStartEvent, ...prev]);
+    } catch (err) {
+      console.error("Error starting voice transmission:", err);
+    }
+  }
+
+  // Stop voice transmission (for manual mode)
+  function stopVoiceTransmission() {
+    if (!isSessionActive || !audioTrack.current) {
+      console.error("Cannot stop voice transmission: missing prerequisites");
+      return;
+    }
+    
+    try {
+      console.log("Stopping voice transmission: Disabling track");
+      // Just disable the track instead of removing it
+      audioTrack.current.enabled = false;
+      
+      // Log transmission stop event
+      const transmissionStopEvent = {
+        type: "client.voice_transmission.stop",
+        timestamp: new Date().toLocaleTimeString(),
+        event_id: crypto.randomUUID()
+      };
+      setEvents(prev => [transmissionStopEvent, ...prev]);
+    } catch (err) {
+      console.error("Error stopping voice transmission:", err);
+    }
+  }
+
   // Stop current session, clean up peer connection and data channel
   function stopSession() {
     if (dataChannel) {
       dataChannel.close();
     }
 
-    peerConnection.current.getSenders().forEach((sender) => {
-      if (sender.track) {
-        sender.track.stop();
-      }
-    });
-
     if (peerConnection.current) {
+      peerConnection.current.getSenders().forEach((sender) => {
+        if (sender.track) {
+          sender.track.stop();
+        }
+      });
+      
       peerConnection.current.close();
     }
 
+    if (audioTrack.current) {
+      audioTrack.current.stop();
+      audioTrack.current = null;
+    }
+    
+    if (mediaStream.current) {
+      mediaStream.current.getTracks().forEach(track => track.stop());
+      mediaStream.current = null;
+    }
+
+    audioSender.current = null;
     setIsSessionActive(false);
     setDataChannel(null);
     peerConnection.current = null;
@@ -218,6 +318,10 @@ export default function App() {
               stopSession={stopSession}
               sendClientEvent={sendClientEvent}
               sendTextMessage={sendTextMessage}
+              startVoiceTransmission={startVoiceTransmission}
+              stopVoiceTransmission={stopVoiceTransmission}
+              isManualMode={isManualMode}
+              setIsManualMode={setIsManualMode}
               events={events}
               isSessionActive={isSessionActive}
             />
