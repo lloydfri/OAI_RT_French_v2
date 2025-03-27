@@ -6,40 +6,62 @@ function Event({ event, timestamp }) {
   const isClient = event.event_id && !event.event_id.startsWith("event_");
 
   return (
-    <div className="flex flex-col gap-2 p-2 rounded-md bg-gray-50">
-      <div
-        className="flex items-center gap-2 cursor-pointer"
+    <div className="rounded-md bg-gray-50 p-2 w-full">
+      <div 
+        className="grid grid-cols-[20px_1fr] items-start gap-2 cursor-pointer"
         onClick={() => setIsExpanded(!isExpanded)}
       >
-        {isClient ? (
-          <ArrowDown className="text-blue-400" />
-        ) : (
-          <ArrowUp className="text-green-400" />
-        )}
-        <div className="text-sm text-gray-500">
+        <div className="text-center">
+          {isClient ? (
+            <ArrowDown className="text-blue-400 inline-block" />
+          ) : (
+            <ArrowUp className="text-green-400 inline-block" />
+          )}
+        </div>
+        <div 
+          className="text-sm text-gray-500" 
+          style={{ 
+            wordWrap: 'break-word', 
+            wordBreak: 'break-word',
+            overflowWrap: 'break-word',
+            hyphens: 'auto',
+            width: '100%'
+          }}
+        >
           {isClient ? "client:" : "server:"}
           &nbsp;{event.type} | {timestamp}
         </div>
       </div>
-      <div
-        className={`text-gray-500 bg-gray-200 p-2 rounded-md overflow-x-auto ${
-          isExpanded ? "block" : "hidden"
-        }`}
-      >
-        <pre className="text-xs whitespace-pre-wrap break-words overflow-wrap-anywhere">{JSON.stringify(event, null, 2)}</pre>
-      </div>
+      {isExpanded && (
+        <div className="mt-2 text-gray-500 bg-gray-200 p-2 rounded-md">
+          <pre 
+            className="text-xs"
+            style={{ 
+              whiteSpace: 'pre-wrap', 
+              wordWrap: 'break-word',
+              wordBreak: 'break-word',
+              overflowWrap: 'break-word',
+              width: '100%'
+            }}
+          >
+            {JSON.stringify(event, null, 2)}
+          </pre>
+        </div>
+      )}
     </div>
   );
 }
 
 function Panel({ title, children }) {
   return (
-    <div className="flex flex-col border border-gray-200 rounded-md shadow-sm overflow-hidden">
+    <div className="flex flex-col border border-gray-200 rounded-md shadow-sm h-full overflow-hidden">
       <div className="bg-gray-100 p-2 font-semibold border-b border-gray-200">
         {title}
       </div>
-      <div className="overflow-y-auto p-2 flex-1">
-        {children}
+      <div className="overflow-y-auto p-2 flex-1 w-full">
+        <div className="w-full max-w-full overflow-hidden">
+          {children}
+        </div>
       </div>
     </div>
   );
@@ -59,7 +81,12 @@ export default function EventLog({ events }) {
     if (event.type.endsWith("delta")) {
       // Check if we have this delta type
       const deltaType = event.type;
-      const newDeltaText = event.delta || '';
+      let newDeltaText = event.delta || '';
+      
+      // Fix potential spacing issues with question marks in French text
+      if (deltaType === "response.audio_transcript.delta" && newDeltaText.includes(' ?')) {
+        newDeltaText = newDeltaText.replace(' ?', '?');
+      }
       
       // Process all delta events and accumulate them
       if (deltaEvents[deltaType]) {
@@ -68,6 +95,9 @@ export default function EventLog({ events }) {
       } else {
         // First delta of this type we've seen
         deltaEvents[deltaType] = {...event};
+        if (deltaType === "response.audio_transcript.delta") {
+          deltaEvents[deltaType].delta = newDeltaText;
+        }
       }
 
       // Add to transcript if it's an audio transcript delta
@@ -91,7 +121,9 @@ export default function EventLog({ events }) {
 
   // Update transcript state if it changed
   if (currentTranscript !== transcript) {
-    setTranscript(currentTranscript);
+    // Fix any remaining spacing issues with question marks
+    const fixedTranscript = currentTranscript.replace(/ \?/g, '?');
+    setTranscript(fixedTranscript);
   }
   
   // Auto-scroll transcript container to bottom when transcript changes
@@ -139,3 +171,4 @@ export default function EventLog({ events }) {
     </div>
   );
 }
+
