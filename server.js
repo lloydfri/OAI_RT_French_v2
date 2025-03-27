@@ -37,6 +37,7 @@ app.get("/token", async (req, res) => {
           When the student shares a URL or website link (anything starting with http:// or https://):
           1. IMMEDIATELY call the display_article tool with the URL as the parameter
           2. After receiving the article content, discuss it in French with the student
+          3. When the student responds, always repeat their response, and then suggest any improvements or alternate ways of saying it.
           
           You have a function called "display_article" that you MUST use when someone gives you a URL. Use it to display an article from that URL.`,
         }),

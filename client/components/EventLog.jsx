@@ -52,14 +52,18 @@ function Event({ event, timestamp }) {
   );
 }
 
-function Panel({ title, children }) {
+function Panel({ title, children, contentRef }) {
   return (
     <div className="flex flex-col border border-gray-200 rounded-md shadow-sm h-full overflow-hidden">
       <div className="bg-gray-100 p-2 font-semibold border-b border-gray-200">
         {title}
       </div>
-      <div className="overflow-y-auto p-2 flex-1 w-full">
-        <div className="w-full max-w-full overflow-hidden">
+      <div 
+        ref={contentRef}
+        className="overflow-y-auto p-2 flex-1 w-full" 
+        style={{ height: 'calc(100% - 40px)' }}
+      >
+        <div className="w-full max-w-full">
           {children}
         </div>
       </div>
@@ -128,9 +132,37 @@ export default function EventLog({ events }) {
   
   // Auto-scroll transcript container to bottom when transcript changes
   useEffect(() => {
-    if (transcriptRef.current) {
-      transcriptRef.current.scrollTop = transcriptRef.current.scrollHeight;
-    }
+    if (!transcriptRef.current) return;
+    
+    // Function to scroll to bottom
+    const scrollToBottom = () => {
+      if (transcriptRef.current) {
+        transcriptRef.current.scrollTop = transcriptRef.current.scrollHeight;
+      }
+    };
+    
+    // Initial scroll
+    scrollToBottom();
+    
+    // Set up a MutationObserver to watch for content changes
+    const observer = new MutationObserver(() => {
+      scrollToBottom();
+    });
+    
+    // Start observing
+    observer.observe(transcriptRef.current, {
+      childList: true,
+      subtree: true,
+      characterData: true
+    });
+    
+    // Also use a timeout as a fallback
+    setTimeout(scrollToBottom, 100);
+    
+    return () => {
+      // Clean up observer on unmount
+      observer.disconnect();
+    };
   }, [transcript]);
   
   // Create a list of accumulated delta events for display
@@ -145,10 +177,12 @@ export default function EventLog({ events }) {
   return (
     <div className="h-full w-full">
       <div className="grid grid-cols-3 gap-4 h-full">
-        <Panel title="Transcript">
+        <Panel title="Transcript" contentRef={transcriptRef}>
           <div 
-            ref={transcriptRef}
-            className="whitespace-pre-wrap text-gray-700 overflow-y-auto max-h-full"
+            className="whitespace-pre-wrap text-gray-700 w-full"
+            style={{
+              scrollBehavior: "smooth"
+            }}
           >
             {transcript || "Awaiting transcript..."}
           </div>
