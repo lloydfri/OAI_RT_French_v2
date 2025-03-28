@@ -5,6 +5,58 @@ import SessionControls from "./SessionControls";
 import ToolPanel from "./ToolPanel";
 import ArticlePanel from "./ArticlePanel";
 
+// Combined tool registration with both tools
+const combinedToolRegistration = {
+  type: "session.update",
+  session: {
+    tools: [
+      {
+        type: "function",
+        name: "display_article",
+        description: "Call this function when a user gives you a URL, implicitly asking you to have a conversation about the article on that URL.",
+        parameters: {
+          type: "object",
+          strict: true,
+          properties: {
+            url: {
+              type: "string",
+              description: "URL of the article to fetch and display.",
+            },
+          },
+          required: ["url"],
+        },
+      },
+      {
+        type: "function",
+        name: "display_color_palette",
+        description: "Appelez cette fonction lorsqu'un utilisateur demande une palette de couleurs. Vous DEVEZ générer des valeurs hexadécimales pour les couleurs (comme #FF0000).",
+        parameters: {
+          type: "object",
+          strict: true,
+          properties: {
+            theme: {
+              type: "string",
+              description: "Description du thème pour la palette de couleurs.",
+            },
+            colors: {
+              type: "array",
+              description: "Tableau de cinq codes hexadécimaux de couleurs basés sur le thème. Exemple: ['#FF0000', '#00FF00', '#0000FF', '#FFFF00', '#FF00FF']",
+              items: {
+                type: "string",
+                description: "Code hexadécimal de couleur (ex: #FF0000 pour rouge)",
+              },
+              minItems: 5,
+              maxItems: 5
+            },
+          },
+          required: ["theme", "colors"],
+        },
+      }
+    ],
+    tool_choice: "auto",
+  },
+};
+
 export default function App() {
   const [isSessionActive, setIsSessionActive] = useState(false);
   const [events, setEvents] = useState([]);
@@ -115,34 +167,9 @@ export default function App() {
       // Wait a short time before registering tools
       if (!hasRegisteredTools.current) {
         setTimeout(() => {
-          // Explicit tool registration on session start
-          const toolRegistration = {
-            type: "session.update",
-            session: {
-              tools: [
-                {
-                  type: "function",
-                  name: "display_article",
-                  description: "Call this function when a user gives you a URL, implicitly asking you to have a conversation about the article on that URL.",
-                  parameters: {
-                    type: "object",
-                    strict: true,
-                    properties: {
-                      url: {
-                        type: "string",
-                        description: "URL of the article to fetch and display.",
-                      },
-                    },
-                    required: ["url"],
-                  },
-                },
-              ],
-              tool_choice: "auto",
-            },
-          };
-          
-          // Send the tool registration directly
-          dc.send(JSON.stringify(toolRegistration));
+          console.log("Registering all tools from App.jsx");
+          // Send unified tool registration with both tools
+          dc.send(JSON.stringify(combinedToolRegistration));
           hasRegisteredTools.current = true;
         }, 1000);
       }
@@ -304,7 +331,7 @@ export default function App() {
       <nav className="absolute top-0 left-0 right-0 h-16 flex items-center">
         <div className="flex items-center gap-4 w-full m-4 pb-2 border-0 border-b border-solid border-gray-200">
           <img style={{ width: "24px" }} src={logo} />
-          <h1>realtime console</h1>
+          <h1>console temps réel</h1>
         </div>
       </nav>
       <main className="absolute top-16 left-0 right-0 bottom-0">

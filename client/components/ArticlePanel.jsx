@@ -4,30 +4,31 @@ const functionDescription = `
 Call this function when a user gives you an URL, implicitly asking you to have a conversation about the article on that URL.
 `;
 
-const sessionUpdate = {
-  type: "session.update",
-  session: {
-    tools: [
-      {
-        type: "function",
-        name: "display_article",
-        description: functionDescription,
-        parameters: {
-          type: "object",
-          strict: true,
-          properties: {
-            url: {
-              type: "string",
-              description: "URL of the article to fetch and display.",
-            },
-          },
-          required: ["url"],
-        },
-      },
-    ],
-    tool_choice: "auto"
-  },
-};
+// Comment out sessionUpdate since it's now handled in App.jsx
+// const sessionUpdate = {
+//   type: "session.update",
+//   session: {
+//     tools: [
+//       {
+//         type: "function",
+//         name: "display_article",
+//         description: functionDescription,
+//         parameters: {
+//           type: "object",
+//           strict: true,
+//           properties: {
+//             url: {
+//               type: "string",
+//               description: "URL of the article to fetch and display.",
+//             },
+//           },
+//           required: ["url"],
+//         },
+//       },
+//     ],
+//     tool_choice: "auto"
+//   },
+// };
 
 function ArticleContent({ functionCallOutput, onArticleReady }) {
   const { url } = JSON.parse(functionCallOutput.arguments);
@@ -155,23 +156,21 @@ export default function ArticlePanel({
   sendClientEvent,
   events,
 }) {
-  const [functionAdded, setFunctionAdded] = useState(false);
+  // Remove functionAdded state since registration is handled in App.jsx
+  // const [functionAdded, setFunctionAdded] = useState(false);
   const [functionCallOutput, setFunctionCallOutput] = useState(null);
   const [articleData, setArticleData] = useState(null);
+  const [instructionsSent, setInstructionsSent] = useState(false);
 
-  // Register tool when session becomes active
+  // Remove the tool registration useEffect, but keep the reset logic for when session ends
   useEffect(() => {
-    if (isSessionActive && !functionAdded) {
-      sendClientEvent(sessionUpdate);
-      setFunctionAdded(true);
-    }
-
     if (!isSessionActive) {
-      setFunctionAdded(false);
+      // setFunctionAdded(false);
       setFunctionCallOutput(null);
       setArticleData(null);
+      setInstructionsSent(false);
     }
-  }, [isSessionActive, functionAdded, sendClientEvent]);
+  }, [isSessionActive]);
 
   // Process events to detect function calls
   useEffect(() => {
@@ -189,7 +188,9 @@ export default function ArticlePanel({
       );
       
       if (displayArticleCalls.length > 0 && !functionCallOutput) {
+        console.log("Found article function call in response.done");
         setFunctionCallOutput(displayArticleCalls[0]);
+        setInstructionsSent(false); // Reset instruction state for new article
       }
     }
     
@@ -211,6 +212,7 @@ export default function ArticlePanel({
             for (const call of toolCall.tool_calls) {
               if (call.function.name === "display_article") {
                 try {
+                  console.log("Found article tool call in response.update");
                   const args = JSON.parse(call.function.arguments);
                   const output = {
                     type: "function_call",
@@ -219,6 +221,7 @@ export default function ArticlePanel({
                   };
                   
                   setFunctionCallOutput(output);
+                  setInstructionsSent(false); // Reset instruction state for new article
                   foundToolCall = true;
                   break;
                 } catch (e) {
@@ -234,25 +237,16 @@ export default function ArticlePanel({
     }
   }, [events, functionCallOutput]);
 
-  // Manual testing functions
-  const testUrl = (url) => {
-    if (!url.trim()) return;
-    
-    const output = {
-      type: "function_call",
-      name: "display_article",
-      arguments: JSON.stringify({ url: url.trim() })
-    };
-    setFunctionCallOutput(output);
-  };
+  // Manual testing function removed as it's no longer needed
 
   // Handler to be called when article content is ready
   const handleArticleReady = (data) => {
-    // Only update articleData and send event if it's changed
-    if (JSON.stringify(articleData) !== JSON.stringify(data)) {
+    // Only update articleData and send event if it's changed and we haven't sent instructions yet
+    if (JSON.stringify(articleData) !== JSON.stringify(data) && !instructionsSent) {
+      console.log("Article data ready, sending instructions");
       setArticleData(data);
       
-      // Send the article data back to the server
+      // Send the article data back to the server, but only once per article
       setTimeout(() => {
         sendClientEvent({
           type: "response.create",
@@ -263,6 +257,7 @@ export default function ArticlePanel({
           `,
           },
         });
+        setInstructionsSent(true); // Mark that we've sent instructions for this article
       }, 500);
     }
   };
@@ -270,7 +265,7 @@ export default function ArticlePanel({
   return (
     <section className="h-full w-full flex flex-col gap-4">
       <div className="h-full bg-gray-50 rounded-md p-4">
-        <h2 className="text-lg font-bold">Article Panel</h2>
+        <h2 className="text-lg font-bold">Panneau d'Article</h2>
         {isSessionActive ? (
           functionCallOutput ? (
             <ArticleContent 
@@ -279,39 +274,11 @@ export default function ArticlePanel({
             />
           ) : (
             <div className="space-y-4">
-              <p>Provide a URL to an article to discuss...</p>
-              
-              {/* Manual testing form */}
-              <div className="mt-4 border-t pt-4">
-                <p className="text-sm text-gray-500 mb-2">Testing: Manually enter a URL</p>
-                <div className="flex gap-2">
-                  <input 
-                    type="text"
-                    placeholder="Enter URL to test"
-                    className="border border-gray-300 rounded-md p-2 flex-1"
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' && e.target.value.trim()) {
-                        testUrl(e.target.value.trim());
-                      }
-                    }}
-                  />
-                  <button 
-                    className="bg-blue-500 text-white px-3 py-2 rounded-md"
-                    onClick={(e) => {
-                      const input = e.target.previousSibling;
-                      if (input.value.trim()) {
-                        testUrl(input.value.trim());
-                      }
-                    }}
-                  >
-                    Test
-                  </button>
-                </div>
-              </div>
+              <p>Fournissez une URL dans la conversation pour afficher un article...</p>
             </div>
           )
         ) : (
-          <p>Start the session to use this tool...</p>
+          <p>Démarrez la session pour utiliser cet outil...</p>
         )}
       </div>
     </section>

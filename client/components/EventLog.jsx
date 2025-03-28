@@ -28,7 +28,7 @@ function Event({ event, timestamp }) {
             width: '100%'
           }}
         >
-          {isClient ? "client:" : "server:"}
+          {isClient ? "client:" : "serveur:"}
           &nbsp;{event.type} | {timestamp}
         </div>
       </div>
@@ -113,12 +113,12 @@ export default function EventLog({ events }) {
       currentTranscript = currentTranscript + "\n\n";
       // Add the done event to normal events list
       normalEvents.unshift(
-        <Event key={event.event_id || `${event.type}-${Date.now()}`} event={event} timestamp={event.timestamp} />
+        <Event key={`${event.event_id || event.type}-${i}-${Date.now()}`} event={event} timestamp={event.timestamp} />
       );
     } else {
       // Add non-delta events to normal events list
       normalEvents.unshift(
-        <Event key={event.event_id || `${event.type}-${Date.now()}`} event={event} timestamp={event.timestamp} />
+        <Event key={`${event.event_id || event.type}-${i}-${Date.now()}`} event={event} timestamp={event.timestamp} />
       );
     }
   }
@@ -177,28 +177,28 @@ export default function EventLog({ events }) {
   return (
     <div className="h-full w-full">
       <div className="grid grid-cols-3 gap-4 h-full">
-        <Panel title="Transcript" contentRef={transcriptRef}>
+        <Panel title="Transcription" contentRef={transcriptRef}>
           <div 
             className="whitespace-pre-wrap text-gray-700 w-full"
             style={{
               scrollBehavior: "smooth"
             }}
           >
-            {transcript || "Awaiting transcript..."}
+            {transcript || "En attente de transcription..."}
           </div>
         </Panel>
         
-        <Panel title="Normal Events">
+        <Panel title="Événements Normaux">
           {normalEvents.length > 0 ? 
             normalEvents : 
-            <div className="text-gray-500">No events yet...</div>
+            <div className="text-gray-500">Pas d'événements pour le moment...</div>
           }
         </Panel>
         
-        <Panel title="Delta Events">
+        <Panel title="Événements Delta">
           {deltaEventsDisplay.length > 0 ? 
             deltaEventsDisplay : 
-            <div className="text-gray-500">No delta events yet...</div>
+            <div className="text-gray-500">Pas d'événements delta pour le moment...</div>
           }
         </Panel>
       </div>

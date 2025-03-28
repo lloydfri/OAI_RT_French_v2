@@ -19,7 +19,7 @@ function SessionStopped({ startSession }) {
         className={isActivating ? "bg-gray-600" : "bg-red-600"}
         icon={<CloudLightning height={16} />}
       >
-        {isActivating ? "starting session..." : "start session"}
+        {isActivating ? "démarrage de la session..." : "démarrer la session"}
       </Button>
     </div>
   );
@@ -45,7 +45,7 @@ function ModeToggle({ isManualMode, setIsManualMode }) {
           style={{ opacity: "0.5" }}
         />
       </button>
-      <span className={`text-sm ${isManualMode ? "font-bold" : "text-gray-500"}`}>Manual</span>
+      <span className={`text-sm ${isManualMode ? "font-bold" : "text-gray-500"}`}>Manuel</span>
     </div>
   );
 }
@@ -98,7 +98,7 @@ function TalkButton({ startVoiceTransmission, stopVoiceTransmission }) {
       onTouchCancel={handleMouseLeave}
     >
       <Mic height={16} />
-      {isTalking ? "Talking..." : "Talk"} 
+      {isTalking ? "En train de parler..." : "Parler"} 
     </button>
   );
 }
@@ -130,7 +130,7 @@ function SessionActive({
           }
         }}
         type="text"
-        placeholder="send a text message..."
+        placeholder="envoyez un message texte..."
         className="border border-gray-200 rounded-full p-4 flex-1"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
@@ -145,7 +145,7 @@ function SessionActive({
         icon={<MessageSquare height={16} />}
         className="bg-blue-400"
       >
-        send text
+        envoyer texte
       </Button>
       
       {isManualMode && (
