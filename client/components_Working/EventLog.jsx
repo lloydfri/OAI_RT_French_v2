@@ -1,95 +1,208 @@
 import { ArrowUp, ArrowDown } from "react-feather";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
-function TranscriptionEvent({ content, timestamp }) {
+function Event({ event, timestamp }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const isClient = event.event_id && !event.event_id.startsWith("event_");
+
   return (
-    <div className="flex flex-col gap-2 p-2 rounded-md bg-gray-100 border-l-4 border-green-500">
-      <div className="flex items-center gap-2">
-        <div className="text-sm text-gray-500">
-          Tuteur Français | {timestamp}
+    <div className="rounded-md bg-gray-50 p-2 w-full">
+      <div 
+        className="grid grid-cols-[20px_1fr] items-start gap-2 cursor-pointer"
+        onClick={() => setIsExpanded(!isExpanded)}
+      >
+        <div className="text-center">
+          {isClient ? (
+            <ArrowDown className="text-blue-400 inline-block" />
+          ) : (
+            <ArrowUp className="text-green-400 inline-block" />
+          )}
+        </div>
+        <div 
+          className="text-sm text-gray-500" 
+          style={{ 
+            wordWrap: 'break-word', 
+            wordBreak: 'break-word',
+            overflowWrap: 'break-word',
+            hyphens: 'auto',
+            width: '100%'
+          }}
+        >
+          {isClient ? "client:" : "server:"}
+          &nbsp;{event.type} | {timestamp}
         </div>
       </div>
-      <div className="text-gray-800 p-2 rounded-md">
-        {content}
+      {isExpanded && (
+        <div className="mt-2 text-gray-500 bg-gray-200 p-2 rounded-md">
+          <pre 
+            className="text-xs"
+            style={{ 
+              whiteSpace: 'pre-wrap', 
+              wordWrap: 'break-word',
+              wordBreak: 'break-word',
+              overflowWrap: 'break-word',
+              width: '100%'
+            }}
+          >
+            {JSON.stringify(event, null, 2)}
+          </pre>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function Panel({ title, children, contentRef }) {
+  return (
+    <div className="flex flex-col border border-gray-200 rounded-md shadow-sm h-full overflow-hidden">
+      <div className="bg-gray-100 p-2 font-semibold border-b border-gray-200">
+        {title}
+      </div>
+      <div 
+        ref={contentRef}
+        className="overflow-y-auto p-2 flex-1 w-full" 
+        style={{ height: 'calc(100% - 40px)' }}
+      >
+        <div className="w-full max-w-full">
+          {children}
+        </div>
       </div>
     </div>
   );
 }
 
 export default function EventLog({ events }) {
-  const [activeTranscriptions, setActiveTranscriptions] = useState({});
+  const [transcript, setTranscript] = useState("");
+  const transcriptRef = useRef(null);
+  const normalEvents = [];
+  const deltaEvents = {};
+  let currentTranscript = "";
   
-  // Log when we receive new events
-  useEffect(() => {
-    if (events.length > 0) {
-     // console.log(`Received ${events.length} total events`);
-      
-      // Count events by type for overview
-      const eventTypes = {};
-      events.forEach(e => {
-        eventTypes[e.type] = (eventTypes[e.type] || 0) + 1;
-      });
-      //console.log("Event types:", eventTypes);
-    }
-  }, [events]);
-  
-  useEffect(() => {
-    // Get only response.audio_transcript.done events
-    const transcriptEvents = events.filter(event => 
-      event.type === "response.audio_transcript.done" && event.transcript
-    );
+  // Process events for display (don't update state here)
+  for (let i = events.length - 1; i >= 0; i--) {
+    const event = events[i];
     
-    if (transcriptEvents.length === 0) return;
-    
-    // Process each transcript event
-    const updates = {};
-    transcriptEvents.forEach(event => {
-      const key = event.response_id + "-" + event.item_id;
+    if (event.type.endsWith("delta")) {
+      // Check if we have this delta type
+      const deltaType = event.type;
+      let newDeltaText = event.delta || '';
       
-      if (event.transcript && typeof event.transcript === 'string' && event.transcript.trim().length > 0) {
-        updates[key] = {
-          content: event.transcript.trim(),
-          timestamp: event.timestamp,
-          key: key,
-          item_id: event.item_id
-        };
+      // Fix potential spacing issues with question marks in French text
+      if (deltaType === "response.audio_transcript.delta" && newDeltaText.includes(' ?')) {
+        newDeltaText = newDeltaText.replace(' ?', '?');
       }
+      
+      // Process all delta events and accumulate them
+      if (deltaEvents[deltaType]) {
+        // Append delta text (since we're processing from oldest to newest)
+        deltaEvents[deltaType].delta = (deltaEvents[deltaType].delta || '') + newDeltaText;
+      } else {
+        // First delta of this type we've seen
+        deltaEvents[deltaType] = {...event};
+        if (deltaType === "response.audio_transcript.delta") {
+          deltaEvents[deltaType].delta = newDeltaText;
+        }
+      }
+
+      // Add to transcript if it's an audio transcript delta
+      if (deltaType === "response.audio_transcript.delta") {
+        currentTranscript = currentTranscript + newDeltaText;
+      }
+    } else if (event.type === "response.audio_transcript.done") {
+      // Add newlines to separate transcripts
+      currentTranscript = currentTranscript + "\n\n";
+      // Add the done event to normal events list
+      normalEvents.unshift(
+        <Event key={event.event_id || `${event.type}-${Date.now()}`} event={event} timestamp={event.timestamp} />
+      );
+    } else {
+      // Add non-delta events to normal events list
+      normalEvents.unshift(
+        <Event key={event.event_id || `${event.type}-${Date.now()}`} event={event} timestamp={event.timestamp} />
+      );
+    }
+  }
+
+  // Update transcript state if it changed
+  if (currentTranscript !== transcript) {
+    // Fix any remaining spacing issues with question marks
+    const fixedTranscript = currentTranscript.replace(/ \?/g, '?');
+    setTranscript(fixedTranscript);
+  }
+  
+  // Auto-scroll transcript container to bottom when transcript changes
+  useEffect(() => {
+    if (!transcriptRef.current) return;
+    
+    // Function to scroll to bottom
+    const scrollToBottom = () => {
+      if (transcriptRef.current) {
+        transcriptRef.current.scrollTop = transcriptRef.current.scrollHeight;
+      }
+    };
+    
+    // Initial scroll
+    scrollToBottom();
+    
+    // Set up a MutationObserver to watch for content changes
+    const observer = new MutationObserver(() => {
+      scrollToBottom();
     });
     
-    if (Object.keys(updates).length > 0) {
-      //console.log(`Adding ${Object.keys(updates).length} transcriptions:`, updates);
-      setActiveTranscriptions(prev => ({ ...prev, ...updates }));
-    }
-  }, [events]);
-
-  // Convert the transcriptions object to an array for rendering
-  const transcriptionsToDisplay = Object.values(activeTranscriptions)
-    .filter(item => item.content && item.content.trim().length > 0)
-    .sort((a, b) => {
-      const timeA = new Date(a.timestamp).getTime();
-      const timeB = new Date(b.timestamp).getTime();
-      return timeA - timeB;
-    })
-    .map(item => (
-      <TranscriptionEvent 
-        key={item.key}
-        content={item.content}
-        timestamp={item.timestamp}
-      />
-    ));
+    // Start observing
+    observer.observe(transcriptRef.current, {
+      childList: true,
+      subtree: true,
+      characterData: true
+    });
     
-  // Log when transcriptions change
-  useEffect(() => {
-    console.log(`Displaying ${transcriptionsToDisplay.length} transcriptions`);
-  }, [transcriptionsToDisplay.length]);
+    // Also use a timeout as a fallback
+    setTimeout(scrollToBottom, 100);
+    
+    return () => {
+      // Clean up observer on unmount
+      observer.disconnect();
+    };
+  }, [transcript]);
+  
+  // Create a list of accumulated delta events for display
+  const deltaEventsDisplay = Object.entries(deltaEvents).map(([deltaType, deltaEvent]) => (
+    <Event 
+      key={`delta-${deltaType}`} 
+      event={deltaEvent} 
+      timestamp={deltaEvent.timestamp} 
+    />
+  ));
 
   return (
-    <div className="flex flex-col gap-2 overflow-x-auto">
-      {transcriptionsToDisplay.length === 0 ? (
-        <div className="text-gray-500">En attente de la prise de parole de l'élève avec le tuteur de français...</div>
-      ) : (
-        transcriptionsToDisplay
-      )}
+    <div className="h-full w-full">
+      <div className="grid grid-cols-3 gap-4 h-full">
+        <Panel title="Transcript" contentRef={transcriptRef}>
+          <div 
+            className="whitespace-pre-wrap text-gray-700 w-full"
+            style={{
+              scrollBehavior: "smooth"
+            }}
+          >
+            {transcript || "Awaiting transcript..."}
+          </div>
+        </Panel>
+        
+        <Panel title="Normal Events">
+          {normalEvents.length > 0 ? 
+            normalEvents : 
+            <div className="text-gray-500">No events yet...</div>
+          }
+        </Panel>
+        
+        <Panel title="Delta Events">
+          {deltaEventsDisplay.length > 0 ? 
+            deltaEventsDisplay : 
+            <div className="text-gray-500">No delta events yet...</div>
+          }
+        </Panel>
+      </div>
     </div>
   );
 }
+
